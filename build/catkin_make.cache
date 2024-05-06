@@ -1,0 +1,2 @@
+ros_gui
+-G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/weso/qt_ws/devel -DCMAKE_INSTALL_PREFIX=/home/weso/qt_ws/install
