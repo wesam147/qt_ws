@@ -92,7 +92,7 @@ void Dialog::on_close_clicked()
 void Dialog::on_hello_clicked()
 {
   std_msgs::Int8 num;
-  num.data = 1;
+  num.data = 6;
   order_pub_.publish(num);
 }
 
@@ -100,7 +100,23 @@ void Dialog::on_hello_clicked()
 void Dialog::on_pushButton_5_clicked()
 {
   std_msgs::Int8 num2;
-  num2.data = 2;
+  num2.data = 7;
   order_pub_.publish(num2);
+}
+
+
+void Dialog::on_pushButton_3_clicked()
+{
+  std_msgs::Int8 num3;
+  num3.data = 8;
+  order_pub_.publish(num3);
+}
+
+
+void Dialog::on_pushButton_4_clicked()
+{
+  std_msgs::Int8 num4;
+  num4.data = 9;
+  order_pub_.publish(num4);
 }
 

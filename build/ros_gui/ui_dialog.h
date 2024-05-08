@@ -43,12 +43,15 @@ public:
         Dialog->setMaximumSize(QSize(1920, 1080));
         horizontalLayoutWidget = new QWidget(Dialog);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(650, 10, 401, 41));
+        horizontalLayoutWidget->setGeometry(QRect(430, 10, 971, 121));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         time_label = new QLabel(horizontalLayoutWidget);
         time_label->setObjectName(QString::fromUtf8("time_label"));
+        QFont font;
+        font.setPointSize(20);
+        time_label->setFont(font);
 
         horizontalLayout->addWidget(time_label);
 

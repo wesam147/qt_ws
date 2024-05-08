@@ -32,9 +32,13 @@ private:
   Ui::RosGUI *ui;
   QTimer *timer;
   Dialog *secdialog;
+  QTimer *ros_timer;
+  ros::NodeHandlePtr nh_;
+  ros::Publisher order_pub_;
 
 
 public slots:
+  void spinOnce();
   /*
   QTimer *ros_timer;
   ros::NodeHandlePtr nh_;

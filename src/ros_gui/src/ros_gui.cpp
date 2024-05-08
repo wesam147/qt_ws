@@ -7,6 +7,13 @@ RosGUI::RosGUI(QWidget *parent) :
   ui(new Ui::RosGUI)
 {
   ui->setupUi(this);
+  nh_.reset(new ros::NodeHandle("~"));
+  ros_timer = new QTimer(this);
+  connect(ros_timer, SIGNAL(timeout()), this, SLOT(spinOnce()));
+  ros_timer->start(100);
+
+  std::int8_t order_topic;
+  order_pub_ = nh_->advertise<std_msgs::Int8>("order_topic",1);
   /*
   nh_.reset(new ros::NodeHandle("~"));
   ros_timer = new QTimer(this);
@@ -63,13 +70,22 @@ RosGUI::~RosGUI()
 //     //ui->clock->display(text);
 // }
 
-
+void RosGUI::spinOnce(){
+  if (ros::ok()){
+    ros::spinOnce();
+  }
+  else
+    QApplication::quit();
+}
 
 void RosGUI::on_pushButton_clicked()
 {
   // Dialog secdialog;
   // secdialog.setModal(true);
   // secdialog.exec();
+  std_msgs::Int8 num5;
+  num5.data = 5;
+  order_pub_.publish(num5);
   secdialog = new Dialog(this);
   secdialog->show();
   //hide();
