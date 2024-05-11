@@ -20,7 +20,12 @@ Dialog::Dialog(QWidget *parent) :
   connect(timer, SIGNAL(timeout()),this,SLOT(timerfunc()));
   timer->start(1000);
   showFullScreen();
-  QPixmap bkgrnd2("/home/weso/qt_ws/white.jpg");
+
+  std::string package_name = "ros_gui";
+  std::string package_path = ros::package::getPath(package_name) + "/src";
+  QString qPackagePath = QString::fromStdString(package_path);
+
+  QPixmap bkgrnd2(qPackagePath + "/hud.jpeg");
   //bkgrnd = bkgrnd.scaled(this->size(), Qt::IgnoreAspectRatio);
   bkgrnd2 = bkgrnd2.scaled(1900,1080);
   QPalette palette2;
@@ -34,30 +39,46 @@ Dialog::Dialog(QWidget *parent) :
   // Dialog wind;
   // wind.show();
 
-  QPixmap pixmap("/home/weso/qt_ws/wave.png");
+  QPixmap pixmap(qPackagePath + "/deal.jpeg");
+  pixmap = pixmap.scaled(100,100);
   QIcon ButtonIcon(pixmap);
   ui->hello->setIcon(ButtonIcon);
   ui->hello->setIconSize(pixmap.rect().size());
 
-  QPixmap pixmap2("/home/weso/qt_ws/close.png");
+  QPixmap pixmap2(qPackagePath + "/close.png");
   QIcon ButtonIcon2(pixmap2);
   ui->close->setIcon(ButtonIcon2);
   ui->close->setIconSize(pixmap2.rect().size());
 
-  QPixmap pixmap3("/home/weso/qt_ws/gear.png");
+  QPixmap pixmap3(qPackagePath + "/gear.png");
   QIcon ButtonIcon3(pixmap3);
   ui->settings->setIcon(ButtonIcon3);
   ui->settings->setIconSize(pixmap3.rect().size());
 
-  QPixmap pixmap4("/home/weso/qt_ws/candy.png");
+  QPixmap pixmap4(qPackagePath + "/candy.png");
   QIcon ButtonIcon4(pixmap4);
   ui->pushButton_5->setIcon(ButtonIcon4);
   ui->pushButton_5->setIconSize(pixmap4.rect().size());
+
+  QPixmap pixmap5(qPackagePath + "/map.jpeg");
+  pixmap5 = pixmap5.scaled(100,100);
+  QIcon ButtonIcon5(pixmap5);
+  ui->pushButton_3->setIcon(ButtonIcon5);
+  ui->pushButton_3->setIconSize(pixmap5.rect().size());
+
+  QPixmap pixmap6(qPackagePath + "/loc.jpeg");
+  pixmap6 = pixmap6.scaled(100,100);
+  QIcon ButtonIcon6(pixmap6);
+  ui->pushButton_4->setIcon(ButtonIcon6);
+  ui->pushButton_4->setIconSize(pixmap6.rect().size());
+
 
   ui->hello->setFlat(true);
   ui->close->setFlat(true);
   ui->settings->setFlat(true);
   ui->pushButton_5->setFlat(true);
+  ui->pushButton_3->setFlat(true);
+  ui->pushButton_4->setFlat(true);
 
 }
 

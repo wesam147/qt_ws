@@ -9,6 +9,7 @@
 #include "dialog.h"
 
 #include <ros/ros.h>
+#include <ros/package.h>
 #include <std_msgs/String.h>
 #include <qtimer.h>
 #include <sstream>
@@ -20,6 +21,7 @@ class RosGUI;
 class RosGUI : public QWidget
 {
   Q_OBJECT
+
 
 public:
   explicit RosGUI(QWidget *parent = nullptr);

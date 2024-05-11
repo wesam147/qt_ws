@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QLCDNumber>
 #include <ros/ros.h>
+#include <ros/package.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Int8.h>
 #include <qtimer.h>

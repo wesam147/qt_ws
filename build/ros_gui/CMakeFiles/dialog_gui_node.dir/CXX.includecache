@@ -6,28 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/RN7GR7OTSP/moc_dialog.cpp
-include/ros_gui/dialog.h
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/RN7GR7OTSP/include/ros_gui/dialog.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/RN7GR7OTSP/moc_ros_gui.cpp
-include/ros_gui/ros_gui.h
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/RN7GR7OTSP/include/ros_gui/ros_gui.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/mocs_compilation.cpp
-RN7GR7OTSP/moc_dialog.cpp
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/RN7GR7OTSP/moc_dialog.cpp
-RN7GR7OTSP/moc_ros_gui.cpp
-/home/weso/qt_ws/build/ros_gui/dialog_gui_node_autogen/RN7GR7OTSP/moc_ros_gui.cpp
-
 /home/weso/qt_ws/src/ros_gui/include/ros_gui/dialog.h
 QDialog
 -
@@ -36,6 +14,8 @@ QTimer
 QLCDNumber
 -
 ros/ros.h
+-
+ros/package.h
 -
 std_msgs/String.h
 -
@@ -46,38 +26,6 @@ qtimer.h
 sstream
 -
 
-/home/weso/qt_ws/src/ros_gui/include/ros_gui/ros_gui.h
-QWidget
--
-QLCDNumber
--
-QTime
--
-QTimer
--
-QDateTime
--
-dialog.h
-/home/weso/qt_ws/src/ros_gui/include/ros_gui/dialog.h
-ros/ros.h
--
-std_msgs/String.h
--
-qtimer.h
--
-sstream
--
-
-/home/weso/qt_ws/src/ros_gui/nodes/dialog_gui_node.cpp
-QApplication
--
-QIcon
--
-ros_gui.h
-/home/weso/qt_ws/src/ros_gui/nodes/ros_gui.h
-dialog.h
-/home/weso/qt_ws/src/ros_gui/nodes/dialog.h
-
 /home/weso/qt_ws/src/ros_gui/src/dialog.cpp
 dialog.h
 /home/weso/qt_ws/src/ros_gui/src/dialog.h
@@ -86,14 +34,6 @@ ui_dialog.h
 QDebug
 -
 QDateTime
--
-
-/home/weso/qt_ws/src/ros_gui/src/ros_gui.cpp
-ros_gui.h
-/home/weso/qt_ws/src/ros_gui/src/ros_gui.h
-ui_rosgui.h
-/home/weso/qt_ws/src/ros_gui/src/ui_rosgui.h
-QWidget
 -
 
 /opt/ros/noetic/include/ros/advertise_options.h
@@ -370,6 +310,16 @@ common.h
 boost/bind.hpp
 -
 xmlrpcpp/XmlRpcValue.h
+-
+
+/opt/ros/noetic/include/ros/package.h
+string
+-
+utility
+-
+vector
+-
+map
 -
 
 /opt/ros/noetic/include/ros/param.h
@@ -801,10 +751,6 @@ qdatetime.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 qdebug.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
-qdatetime.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 qtimer.h
@@ -1544,10 +1490,6 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon
-qicon.h
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 QtGui/qtguiglobal.h
 -
@@ -2080,16 +2022,6 @@ QtWidgets/QGridLayout
 QtWidgets/QHBoxLayout
 -
 QtWidgets/QLabel
--
-QtWidgets/QPushButton
--
-QtWidgets/QWidget
--
-
-ros_gui/ui_rosgui.h
-QtCore/QVariant
--
-QtWidgets/QApplication
 -
 QtWidgets/QPushButton
 -

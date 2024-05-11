@@ -56,7 +56,7 @@
     <item row="1" column="0">
      <widget class="QPushButton" name="pushButton_3">
       <property name="text">
-       <string>map</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -83,7 +83,7 @@
     <item row="1" column="1">
      <widget class="QPushButton" name="pushButton_4">
       <property name="text">
-       <string>turn around</string>
+       <string/>
       </property>
      </widget>
     </item>

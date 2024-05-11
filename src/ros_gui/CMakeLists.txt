@@ -7,6 +7,7 @@ project(ros_gui)
 
 set(ROS_DEPENDS
   roscpp
+  roslib
   std_msgs
   )
 

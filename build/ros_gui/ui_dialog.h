@@ -103,10 +103,10 @@ public:
     {
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
         time_label->setText(QString());
-        pushButton_3->setText(QApplication::translate("Dialog", "map", nullptr));
+        pushButton_3->setText(QString());
         hello->setText(QString());
         settings->setText(QString());
-        pushButton_4->setText(QApplication::translate("Dialog", "turn around", nullptr));
+        pushButton_4->setText(QString());
         pushButton_5->setText(QString());
         close->setText(QString());
     } // retranslateUi
